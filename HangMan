@@ -1,0 +1,109 @@
+##HangMan Project
+import random
+import time
+chances=10
+l=['School','Video Games', 'TV Shows', 'Board Games']
+print ("Welcome to Hang Man! Choose your category")
+time.sleep(3)
+print (l)
+category=input()
+if category=='School':
+    sL=['locker', 'teacher', 'student', 'computers', 'desk', 'pencil', 'eraser', 'physical education', 'math', 'music', 'language', 'sharperner', 'visual arts', 'principal']
+    a=random.choice(sL)
+    b=len(a)
+    cgsS=list(a)
+    bsL=['_']*b
+    print (bsL)
+    while True:
+        print ("Enter a letter to guess the word!")
+        gs=input()
+        if gs in a:
+            for nS in range (0,b,1):
+                if gs==a[nS]:
+                    bsL[nS]=gs
+        print (bsL)
+        if gs not in a:
+            print ("Guess again!")
+            chances=chances-1
+            if chances==0:
+                print ("Game Over. Sorry! Maybe next time?")
+                r=input()
+                break
+        if cgsS==bsL:
+            print ("Congratuations! You won!")
+            break
+if category=='Video Games':
+    vgL=['roblox', 'minecraft', 'super smash bros', 'gta', 'fortnite', 'red dead redemption', 'the legend of zelda', 'league of legends', 'tetris', 'rocket league', 'call of duty', 'pubg', 'valorant']
+    a=random.choice(vgL)
+    b=len(a)
+    cgsVG=list(a)
+    bvgL=['_']*b
+    print (bvgL)
+    while True:
+        print ("Enter a letter to guess the word!")
+        gs=input()
+        if gs in a:
+            for nVG in range (0,b,1):
+                if gs==a[nVG]:
+                    bvgL[nVG]=gs
+        print (bvgL)
+        if gs not in a:
+            print ("Guess again!")
+            chances=chances-1
+            if chances==0:
+                print ("Game Over. Sorry! Maybe next time?")
+                r=input()
+                break
+        if cgsVG==bvgL:
+            print ("Congratuations! You won!")
+            break
+if category=='TV Shows':
+    vtsL=['full house', 'sesame street', 'paw patrol', 'naruto', 'death note', 'mickey mouse', 'adventure time', 'rick and morty']
+    a=random.choice(vtsL)
+    b=len(a)
+    cgsts=list(a)
+    btsL=['_']*b
+    print (btsL)
+    while True:
+        print ("Enter a letter to guess the word!")
+        gs=input()
+        if gs in a:
+            for nts in range (0,b,1):
+                if gs==a[nts]:
+                    btsL[nts]=gs
+        print (btsL)
+        if gs not in a:
+            print ("Guess again!")
+            chances=chances-1
+            if chances==0:
+                print ("Game Over. Sorry! Maybe next time?")
+                r=input()
+                break
+        if cgsts==btsL:
+            print ("Congratuations! You won!")
+            break
+if category=='Board Games':
+    vbgL=['monopoly', 'twister', 'hungry hippo', 'brain fart', 'chess', 'speak out', 'pac man', 'four corners', 'checkers', 'snakes and ladders']
+    a=random.choice(vbgL)
+    b=len(a)
+    cgsbg=list(a)
+    bbgL=['_']*b
+    print (bbgL)
+    while True:
+        print ("Enter a letter to guess the word!")
+        gs=input()
+        if gs in a:
+            for nbg in range (0,b,1):
+                if gs==a[nbg]:
+                    bbgL[nbg]=gs
+        print (bbgL)
+        if gs not in a:
+            print ("Guess again!")
+            chances=chances-1
+            if chances==0:
+                print ("Game Over. Sorry! Maybe next time?")
+                r=input()
+                break
+        if cgsbg==bbgL:
+            print ("Congratuations! You won!")
+            break
